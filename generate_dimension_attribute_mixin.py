@@ -7,9 +7,10 @@ def generate_dimension_attribute_mixin(name: str, start: int, end: int, step: in
             'name': f'{name.upper()}: {dim}MM, MT: {dim + offset}MM',
             'attribute_id/id': f'product_attribute_{name.lower().replace(" ", "_")}',
             'is_custom': 'FALSE',
+            'sequence': index
             # 'value_on_create': float(dim)
         }
-        for dim in range(start, end + 1, step)
+        for index, dim in enumerate(range(start, end + 1, step))
     ]
     
     return {
