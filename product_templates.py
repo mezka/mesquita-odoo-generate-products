@@ -77,5 +77,40 @@ product_template_rf120_plus_doble = {
     'name': 'PUERTA RF120 PLUS DOBLE',
     'description': 'PUERTA RF120 PLUS DOBLE',
     'attributes': attributes_puerta_doble,
-    'dynamic_price_code': Path('./dynamic_price_scripts/dynamic_price_code_puerta_doble.py').read_text()
+    'dynamic_price_code': Path('./dynamic_price_scripts/dynamic_price_code_puerta_doble.py').read_text(),
+}
+
+width_mixin_puerta_simple_euro = generate_dimension_attribute_mixin('ANCHO_PL', 900, 1000, 100, 100)
+attributes_puerta_simple_euro = [width_mixin_puerta_simple, height_mixin, acabado_mixin, marco_mixin, grampa_mixin, sentido_mixin, price_mutiplier_mixin_puerta_simple_width, price_mutiplier_mixin_puerta_simple_height]
+
+product_template_rf_30_euro_simple = {
+   'id': 'product_template_rf_30_euro_simple',
+    'name': 'PUERTA RF30 EURO SIMPLE',
+    'description': 'PUERTA RF30 EURO SIMPLE',
+    'attributes': attributes_puerta_simple_euro,
+    'dynamic_price_code': Path('./dynamic_price_scripts/dynamic_price_code_puerta_simple.py').read_text()
+}
+
+product_template_rf_60_euro_simple = {
+   'id': 'product_template_rf_60_euro_simple',
+    'name': 'PUERTA RF60 EURO SIMPLE',
+    'description': 'PUERTA RF60 EURO SIMPLE',
+    'attributes': attributes_puerta_simple_euro,
+    'dynamic_price_code': Path('./dynamic_price_scripts/dynamic_price_code_puerta_simple.py').read_text()
+}
+
+product_template_rf_90_euro_simple = {
+   'id': 'product_template_rf_90_euro_simple',
+    'name': 'PUERTA RF90 EURO SIMPLE',
+    'description': 'PUERTA RF90 EURO SIMPLE',
+    'attributes': attributes_puerta_simple_euro,
+    'dynamic_price_code': Path('./dynamic_price_scripts/dynamic_price_code_puerta_simple.py').read_text() 
+}
+
+product_template_rf_120_euro_simple = {
+   'id': 'product_template_rf_120_euro_simple',
+    'name': 'PUERTA RF120 EURO SIMPLE',
+    'description': 'PUERTA RF120 EURO SIMPLE',
+    'attributes': attributes_puerta_simple_euro,
+    'dynamic_price_code': Path('./dynamic_price_scripts/dynamic_price_code_puerta_simple.py').read_text()
 }

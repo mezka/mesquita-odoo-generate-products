@@ -1,6 +1,7 @@
 import pandas as pd
 from typing import List, Dict, Set
 from product_templates import product_template_rf_30_plus_simple, product_template_rf_60_lite_simple, product_template_rf_60_plus_simple, product_template_rf_60_plus_doble, product_template_rf_90_plus_simple, product_template_rf_90_plus_doble, product_template_rf_120_plus_simple, product_template_rf120_plus_doble
+from product_templates import product_template_rf_30_euro_simple, product_template_rf_60_euro_simple, product_template_rf_90_euro_simple, product_template_rf_120_euro_simple
 
 def extract_attributes_and_values(templates: List[Dict]) -> Dict[str, pd.DataFrame]:
     attributes: Set[frozenset] = set()
@@ -57,5 +58,5 @@ def generate_csvs_from_product_templates(templates: List[Dict]):
         df.to_csv(f'{model_name}.csv', index=False)
 
 if __name__ == "__main__":
-    templates = [product_template_rf_30_plus_simple, product_template_rf_60_lite_simple, product_template_rf_60_plus_simple, product_template_rf_60_plus_doble, product_template_rf_90_plus_simple, product_template_rf_90_plus_doble, product_template_rf_120_plus_simple, product_template_rf120_plus_doble]
+    templates = [product_template_rf_30_plus_simple, product_template_rf_60_lite_simple, product_template_rf_60_plus_simple, product_template_rf_60_plus_doble, product_template_rf_90_plus_simple, product_template_rf_90_plus_doble, product_template_rf_120_plus_simple, product_template_rf120_plus_doble, product_template_rf_30_euro_simple, product_template_rf_60_euro_simple, product_template_rf_90_euro_simple, product_template_rf_120_euro_simple]
     generate_xlsx_from_product_templates("odoo_data.xlsx", templates)
