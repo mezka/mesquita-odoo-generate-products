@@ -81,7 +81,8 @@ product_template_rf120_plus_doble = {
 }
 
 width_mixin_puerta_simple_euro = generate_dimension_attribute_mixin('ANCHO_PL', 900, 1000, 100, 100)
-attributes_puerta_simple_euro = [width_mixin_puerta_simple, height_mixin, acabado_mixin, marco_mixin, grampa_mixin, sentido_mixin, price_mutiplier_mixin_puerta_simple_height]
+height_mixin_puerta_simple_euro = generate_dimension_attribute_mixin('ALTO_PL', 2000, 2000, 50, 50)
+attributes_puerta_simple_euro = [width_mixin_puerta_simple_euro, height_mixin_puerta_simple_euro, acabado_mixin, marco_mixin, grampa_mixin, sentido_mixin]
 
 product_template_rf_30_euro_simple = {
    'id': 'product_template_rf_30_euro_simple',
